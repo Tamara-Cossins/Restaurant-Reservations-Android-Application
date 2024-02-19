@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F3EF"
+    tools:context=".DashboardFragment">
+
+
+    <!-- Guideline to split the screen -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+
+    <!-- Seaside background image for the top half -->
+    <ImageView
+        android:id="@+id/top_half_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/seasidebackground"
+        app:layout_constraintBottom_toTopOf="@id/middle_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Dockside Delight!"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/top_half_image"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large">
+    </TextView>
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello, Tamara"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+        android:layout_marginLeft="14dp"
+        android:padding="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/outline_access_time_24"
+        app:layout_constraintTop_toBottomOf="@id/name_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="17dp"
+        android:text="9:00 - 23:00"
+        android:textColor="@color/black"
+        android:elevation="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/dashboard_location"
+        android:text="William Royal Yard"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toEndOf="@id/time"
+        app:layout_constraintTop_toBottomOf="@id/name_text"
+        android:textColor="@color/black"
+        android:layout_marginLeft="40dp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/location"
+        app:layout_constraintTop_toBottomOf="@id/name_text"
+        android:drawableTop="@drawable/baseline_star_24"
+        android:layout_marginTop="17dp"
+        android:text="4.7 Stars"
+        android:textColor="@color/black"
+        android:layout_marginLeft="40dp">
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/intro_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Email text input field -->
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dockside Delight offers a unique dining experience where exquisite flavors meet breathtaking scenery. \n From our sun-kissed outdoor seating that overlooks the tranquil docks, to the cozy and elegantly designed indoor area, each corner of Dockside Delight is crafted to create unforgettable moments."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            android:textAlignment="center">
+        </TextView>
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/indoor_pic"
+        android:layout_width="270dp"
+        android:layout_height="184dp"
+        android:src="@drawable/indoor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="45dp"
+        app:layout_constraintTop_toBottomOf="@id/intro_card">
+    </ImageView>
+
+    <Button
+        android:id="@+id/menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View our menu "
+        android:layout_marginTop="10dp"
+        android:padding="6dp"
+        app:layout_constraintTop_toBottomOf="@id/indoor_pic"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:drawableRight="@drawable/baseline_restaurant_menu_24">
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

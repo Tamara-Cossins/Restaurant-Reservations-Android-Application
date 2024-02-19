@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profile"
+        />
+    <item
+        android:id="@+id/favourites"
+        android:icon="@drawable/baseline_favorite_24"
+        android:title="Favourites" />
+    <item
+        android:id="@+id/book"
+        android:icon="@drawable/add"
+        android:title="Book" />
+    <item
+        android:id="@+id/edit"
+        android:icon="@drawable/edit"
+        android:title="Edit" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Settings" />
+</menu>

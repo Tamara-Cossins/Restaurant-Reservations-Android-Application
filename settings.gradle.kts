@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DocksideDelightApp"
+rootProject.name = "DocksideDelight"
 include(":app")
  
